@@ -11,9 +11,14 @@ public class MainMenu : MonoBehaviour
     public GameObject exitScreen;
     public GameObject settingsScreen;
     public GameObject vibrateToggler;
+    public GameObject loadingScreen;
+    public Text versionText;
     private bool isSettingsMenuActive;
     private bool isQuitMenuActive;
     private int vibrate;
+    public Text availableDiamondsText;
+    public AudioSource openSFX;
+    public AudioSource closeSFX;
 
     private void Start()
     {
@@ -33,6 +38,10 @@ public class MainMenu : MonoBehaviour
         {
             vibrateToggler.GetComponent<Toggle>().isOn = false;
         }
+
+        versionText.text = "v " + Application.version;
+
+        availableDiamondsText.text = PlayerPrefs.GetInt("Diamonds", 50).ToString();
     }
 
     private void Update()
@@ -59,6 +68,7 @@ public class MainMenu : MonoBehaviour
     public void OpenSettings()
     {
         settingsScreen.SetActive(true);
+        openSFX.Play();
         isSettingsMenuActive = true;
         isQuitMenuActive = false;
     }
@@ -66,6 +76,7 @@ public class MainMenu : MonoBehaviour
     public void OpenQuit()
     {
         exitScreen.SetActive(true);
+        openSFX.Play();
         isSettingsMenuActive = false;
         isQuitMenuActive = true;
     }
@@ -73,6 +84,7 @@ public class MainMenu : MonoBehaviour
     public void CloseSettings()
     {
         settingsScreen.SetActive(false);
+        closeSFX.Play();
         isSettingsMenuActive = false;
         isQuitMenuActive = false;
     }
@@ -80,6 +92,7 @@ public class MainMenu : MonoBehaviour
     public void CloseQuit()
     {
         exitScreen.SetActive(false);
+        closeSFX.Play();
         isSettingsMenuActive = false;
         isQuitMenuActive = false;
     }
@@ -87,12 +100,21 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         //ads.HideBannerAd();
+        openSFX.Play();
+        loadingScreen.SetActive(true);
+        Invoke("LoadGameplay", 0.5f);
+    }
+
+    private void LoadGameplay()
+    {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    public void ResetHighScore()
+    public void ResetAll()
     {
         PlayerPrefs.DeleteKey("HighScore");
+        PlayerPrefs.DeleteKey("Diamonds");
+        availableDiamondsText.text = PlayerPrefs.GetInt("Diamonds", 50).ToString();
         resetedScreen.SetActive(true);
     }
 

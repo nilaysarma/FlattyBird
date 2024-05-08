@@ -496,7 +496,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\xA92022-2023 NR Games. All Rights Reserved"
+  m_Text: "\xA92022-2024 NR Games. All Rights Reserved"
 --- !u!222 &1093491192
 CanvasRenderer:
   m_ObjectHideFlags: 0
