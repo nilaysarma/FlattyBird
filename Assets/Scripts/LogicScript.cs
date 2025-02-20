@@ -181,7 +181,7 @@ public class LogicScript : MonoBehaviour
             reviveMenu.SetActive(false);
             Time.timeScale = 1f;
             birdScript.transform.position = new Vector3(0, 0, 0);
-            birdScript.myRigidBody.velocity = new Vector2(0, 0);
+            birdScript.myRigidBody.linearVelocity = new Vector2(0, 0);
             birdScript.heartLostEffect.SetActive(true);
             diamonds = diamonds - diamondsToDeduct;
             PlayerPrefs.SetInt("Diamonds", diamonds);
@@ -209,7 +209,7 @@ public class LogicScript : MonoBehaviour
         watchAdBtn.SetActive(false);
         reviveMenu.SetActive(false);
         birdScript.transform.position = new Vector3(0, 0, 0);
-        birdScript.myRigidBody.velocity = new Vector2(0, 0);
+        birdScript.myRigidBody.linearVelocity = new Vector2(0, 0);
         Time.timeScale = 0;
         tapToStart.SetActive(true);
         adsManager.LoadRewardedAd();

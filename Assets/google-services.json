@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "522586515146",
+    "project_id": "flatty-bird",
+    "storage_bucket": "flatty-bird.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:522586515146:android:53588111a1a30f0e8af633",
+        "android_client_info": {
+          "package_name": "com.NRGames.Flatty.Bird"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnjdpkZ0OEO-CLRyHJlxq1TPrSwxHeC5s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

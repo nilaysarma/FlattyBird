@@ -80,7 +80,7 @@ public class BirdScript : MonoBehaviour
 
     private void Jump()
     {
-        myRigidBody.velocity = Vector2.up * flapStrength;
+        myRigidBody.linearVelocity = Vector2.up * flapStrength;
         jumpSFX.Play();
     }
 
@@ -99,7 +99,7 @@ public class BirdScript : MonoBehaviour
         // Time.timeScale = 1f;
         birdIsAlive = true;
         transform.position = new Vector3(0, 0, 0);  // Alternately: Vector3.zero;
-        myRigidBody.velocity = new Vector2(0, 0);
+        myRigidBody.linearVelocity = new Vector2(0, 0);
         useHeartSFX.Play();
         heartLostEffect.SetActive(true);
 

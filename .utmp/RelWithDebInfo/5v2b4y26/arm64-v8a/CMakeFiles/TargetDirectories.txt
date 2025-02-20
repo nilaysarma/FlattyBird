@@ -1,0 +1,5 @@
+D:/CodingStuffs/Projects/GameDev/FlattyBird/.utmp/RelWithDebInfo/5v2b4y26/arm64-v8a/CMakeFiles/edit_cache.dir
+D:/CodingStuffs/Projects/GameDev/FlattyBird/.utmp/RelWithDebInfo/5v2b4y26/arm64-v8a/CMakeFiles/rebuild_cache.dir
+D:/CodingStuffs/Projects/GameDev/FlattyBird/.utmp/RelWithDebInfo/5v2b4y26/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+D:/CodingStuffs/Projects/GameDev/FlattyBird/.utmp/RelWithDebInfo/5v2b4y26/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+D:/CodingStuffs/Projects/GameDev/FlattyBird/.utmp/RelWithDebInfo/5v2b4y26/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir
